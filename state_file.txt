@@ -1,5 +1,5 @@
-a1_vpc_id=""
-a1_subnet_id=""
-a1_igw_id="igw-057eb68a61af32de3"
-a1_sg_id="sg-097e3b24d05403997"
-a1_rt_id=""
+VPC_ID=vpc-06e50e544cbc3de10
+SUBNET_ID=subnet-0a8e4ac1a3559b294
+IGW_ID=igw-010ab6ea46da57126
+SG_ID=sg-04821af1a288f2f60
+RT_ID=rtb-03ebfd03c59a83dd5
