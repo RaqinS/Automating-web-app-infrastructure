@@ -1,2 +1,5 @@
-vpc-0dbc4c2528c08f0ba
-subnet-0421a47aade7161f2
+a1_vpc_id=""
+a1_subnet_id=""
+a1_igw_id="igw-057eb68a61af32de3"
+a1_sg_id="sg-097e3b24d05403997"
+a1_rt_id=""
