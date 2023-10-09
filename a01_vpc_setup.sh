@@ -1,3 +1,4 @@
+#!/bin/bash
 
 REGION="us-west-2"
 ID_FILE="state_file.txt"
@@ -39,6 +40,7 @@ aws ec2 authorize-security-group-ingress --group-id "$SG_ID" --protocol tcp --po
 RT_ID=$(aws ec2 create-route-table --vpc-id "$VPC_ID" --tag-specifications "ResourceType=route-table,Tags=[{Key=Project,Value=a1_project},{Key=Name,Value=a1_web_rt_1}]" --query "RouteTable.RouteTableId" --output "text") #creates route table
 ADD_TO_STATE_FILE "RT_ID" "$RT_ID"
 
+aws ec2 associate-route-table --subnet-id "$SUBNET_ID" --route-table-id "$RT_ID" #associates route table to subnet
 
 aws ec2 create-route --route-table-id "$RT_ID" --destination-cidr-block 0.0.0.0/0 --gateway-id "$IGW_ID" #assigns defualt route to route table
 

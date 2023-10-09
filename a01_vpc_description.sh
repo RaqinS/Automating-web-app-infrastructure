@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source state_file.txt
 
 aws ec2 describe-vpcs --vpc-id "$VPC_ID"
